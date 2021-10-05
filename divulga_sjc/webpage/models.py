@@ -5,7 +5,7 @@ class Categoria(models.Model):
     nome = models.CharField(max_length = 200)
     
 class Negocio(models.Model):
-    categoria = models.ForeignKey(Categories, on_delete=models.CASCADE)
+    categoria = models.ForeignKey(Categoria, on_delete=models.CASCADE)
     nome = models.CharField(max_length=200)
     endereco = models.CharField(max_length=200)
     telefone = models.CharField(max_length=200)
@@ -13,4 +13,3 @@ class Negocio(models.Model):
     instagram = models.CharField(max_length=200)
     facebook = models.CharField(max_length=200)
     whatsapp = models.CharField(max_length=200)
-    
