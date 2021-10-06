@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+
+<h2>Alimentação</h2>
+
+    {% if not negocios %}
+        <h3>Nenhum negócio cadastrado</h3>
+    {% else %}
+        {% for negocio in negocios %}
+        <div>
+            <h3>{{negocio.nome}}</h3>
+            <p>Endereço: {{negocio.endereco}}</p>
+            <p>Telefone: {{negocio.telefone}}</p>
+            <p>Descrição: {{negocio.descricao}}</p>
+            <p>Instagram: {{negocio.instagram}}</p>
+            <p>Facebook {{negocio.facebook}}</p>
+            <p>Whatsapp {{negocio.whatsapp}}</p>
+        </div>
+        {% endfor %}
+    {% endif %}
+{% endblock %}
