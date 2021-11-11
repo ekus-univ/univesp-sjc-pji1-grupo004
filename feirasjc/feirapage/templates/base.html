@@ -2,15 +2,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    {% load static %}
+  {% load static %}
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Feira</title>
+    <title>Feira Parque Santos Dumont</title>
 
     <!-- Icones -->
     <link rel="stylesheet" href="{% static 'feirapage/icones/style.css'%}">
-
 
     <!-- STYLES -->
     <link rel="stylesheet" href="{% static 'feirapage/style.css'%}">
@@ -24,6 +23,10 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <!-- SWIPER -->
+    <link  rel="stylesheet"  href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
+/>
 
     <!-- BOOTSTRAP -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -119,49 +122,32 @@
                     </div>
                   </div>
 
-                  <div class="card mb-3 cardfeira" style="max-width: 540px;">
-                    <div class="row g-0">
-                      <div class="col-md-4">
-                        <img src="{% static 'feirapage/images/5.jpg' %}" class="img-fluid rounded-start" alt="...">
-                      </div>
-                      <div class="col-md-8">
-                        <div class="card-body">
-                          <h5 class="card-title">Card title</h5>
-                          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="card cardfeira">
+                  <div class="card mb-3 cardfeira grid">
+                    <img class="card-img-top" src="{% static 'feirapage/images/card1.jpg' %}" alt="Card image cap">
                     <div class="card-body">
                       <h5 class="card-title">Barraca do Senhor João</h5>
                       <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, officiis. Soluta doloribus quod provident perferendis dignissimos. Deleniti suscipit aliquam velit facere consequatur placeat magni quas laborum ipsa atque, ratione reprehenderit. </p>
-                      <p class="card-text"><small class="text-muted">atualizado em 17/10/2021</small></p>
+                      <p class="card-text"><small class="text-muted">atualizado em 17/10/2021</small> </p>
                     </div>
-                    <img class="card-img-bottom" src="{% static 'feirapage/images/card1.jpg' %}" alt="Card image cap">
                   </div>
-                  <br>
 
-                  <div class="card cardfeira" style="width: 18rem;">
-                    <img src="{% static 'feirapage/images/card1.jpg' %}" class="card-img-top" alt="...">
+                  <div class="card mb-3 cardfeira grid">
+                    <img class="card-img-top" src="{% static 'feirapage/images/card1.jpg' %}" alt="Card image cap">
                     <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      <a href="#" class="btn btn-primary">Go somewhere</a>
+                      <h5 class="card-title">Barraca do Senhor João</h5>
+                      <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, officiis. Soluta doloribus quod provident perferendis dignissimos. Deleniti suscipit aliquam velit facere consequatur placeat magni quas laborum ipsa atque, ratione reprehenderit. </p>
+                      <p class="card-text"><small class="text-muted">atualizado em 17/10/2021</small> </p>
                     </div>
                   </div>
-                  <br>
-                </div>
 
-
-                  <div class="card cardfeira" style="width: 18rem;">
-                    <img src="{% static 'feirapage/images/card1.jpg' %}" class="card-img-top" alt="...">
+                  <div class="card mb-3 cardfeira grid">
+                    <img class="card-img-top" src="{% static 'feirapage/images/card1.jpg' %}" alt="Card image cap">
                     <div class="card-body">
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <h5 class="card-title">Barraca do Senhor João</h5>
+                      <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, officiis. Soluta doloribus quod provident perferendis dignissimos. Deleniti suscipit aliquam velit facere consequatur placeat magni quas laborum ipsa atque, ratione reprehenderit. </p>
+                      <p class="card-text"><small class="text-muted">atualizado em 17/10/2021</small> </p>
                     </div>
-                  </div>
+                  </div>                  
                 
             </div>
 
@@ -174,28 +160,74 @@
         <!-- TESTIMONIALS -->
         <section class="section" id="testimonials">
 
-          <div class="container grid">
+          <div class="container">
             <h2 class="title">Deixe um depoimento sobre a Feira Santos Dumont</h2>
 
 
-            <!-- caixa de depoimentos -->
-            <div class="testimonials">
-              <div class="card-testimonial">
-                <blockquote>
-                  <p>
-                  <span>&ldquo;</span>
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eos molestiae inventore quis, assumenda maiores et. Tenetur tempore doloribus adipisci quasi.
-                </p>
-                <cite>
-                  Fulana de tal
+            <!-- caixa de depoimentos(com swiper) -->
+            <div class="testimonials swiper-container">
+              <div class="swiper-wrapper">
 
-                </cite>
-              </blockquote>
+                <div class="card-testimonial swiper-slide">
+                  <blockquote>
+                    <p>
+                    <span>&ldquo;</span>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eos molestiae inventore quis, assumenda maiores et. Tenetur tempore doloribus adipisci quasi.
+                  </p>
+                    <cite>
+                      Fulana de tal
+
+                    </cite>
+                  </blockquote> 
+                </div>   
+                
+                <div class="card-testimonial swiper-slide">
+                  <blockquote>
+                    <p>
+                    <span>&ldquo;</span>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eos molestiae inventore quis, assumenda maiores et. Tenetur tempore doloribus adipisci quasi.
+                  </p>
+                    <cite>
+                      Fulana de tal
+
+                    </cite>
+                  </blockquote> 
+                </div>
+
+                <div class="card-testimonial swiper-slide">
+                  <blockquote>
+                    <p>
+                    <span>&ldquo;</span>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eos molestiae inventore quis, assumenda maiores et. Tenetur tempore doloribus adipisci quasi.
+                  </p>
+                    <cite>
+                      Fulana de tal
+
+                    </cite>
+                  </blockquote> 
+                </div>
+
+                <div class="card-testimonial swiper-slide">
+                  <blockquote>
+                    <p>
+                    <span>&ldquo;</span>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eos molestiae inventore quis, assumenda maiores et. Tenetur tempore doloribus adipisci quasi.
+                  </p>
+                    <cite>
+                      Fulana de tal
+
+                    </cite>
+                  </blockquote> 
+                </div>
+
+                
+                
                 
 
+
+
               </div>
-
-
+              <div class="swiper-pagination"></div>
             </div>
 
 
@@ -204,8 +236,6 @@
             <!-- formulário de depoimentos -->
             <div>
               <div>
-                <label for="exampleFormControlInput2" class="form-label"></label>
-                <input type="text" class="form-control" id="exampleFormControlInput2" placeholder=" Título">
                 <label for="exampleFormControlInput1" class="form-label"></label>
                 <input type="text" class="form-control" id="exampleFormControlInput1" placeholder=" Ex.: Maria Souza">
               </div>
@@ -227,11 +257,45 @@
 
         <!-- CONTACT -->
         <section class="section" id="contact">
-
             <div class="container grid">
 
-              <h2 class="title">Contato</h2>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3667.1847257228615!2d-45.89322918539309!3d-23.199937654228677!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cc4a6e8144b717%3A0xc2cc0db732576017!2sParque%20Santos%20Dumont!5e0!3m2!1spt-BR!2sbr!4v1634782556769!5m2!1spt-BR!2sbr" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+
+              <div class="text">
+                <h2 class="title">Nos encontre aqui</h2>
+                <p>Venha conhecer a Feira Santos Dumont</p>
+                <p>Vejo os dias, horários e localização</p>
+              </div>
+
+                <div class="row text">
+
+                  <div class="col-md-6">                    
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3667.1847257228615!2d-45.89322918539309!3d-23.199937654228677!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cc4a6e8144b717%3A0xc2cc0db732576017!2sParque%20Santos%20Dumont!5e0!3m2!1spt-BR!2sbr!4v1634782556769!5m2!1spt-BR!2sbr" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                  </div>
+
+                  <div class="col-md-6"> ,
+                    <h5><i class="icon-store"> </i>Dias e Horários</h5> 
+                    <ul>
+                      <li>Segunda-feira: das 9h às 18h</li>
+                      <li>Quarta-feira: das 9h às 18h</li>
+                      <li>Quinta-feira: das 9h às 18h</li>
+                      <li></li>
+                      <li></li>
+                    </ul> 
+                    <p><i class="icon-map-pin"></i> R. Eng. Prudente Meireles de Morais, nº 1000, Vila Adyana, São José dos Campos - SP</p>
+                  </div>
+
+                  
+
+                  
+                </div>
+  
+                
+
+              
+
+                      
+              
+              
 
             </div>
         </section>
@@ -248,7 +312,13 @@
     </footer>
     
 
+    <!-- SWIPER -->
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
 
+    <!-- Scroll Reveal -->    
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!-- JS -->
    <script src="{% static 'feirapage/script.js' %}"></script>
     
 </body>

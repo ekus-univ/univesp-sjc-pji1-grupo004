@@ -34,9 +34,6 @@
 .icon-close:before {
   content: "\e902";
 }
-.icon-cosmetic:before {
-  content: "\e903";
-}
 .icon-facebook:before {
   content: "\e904";
 }
@@ -57,9 +54,6 @@
 }
 .icon-whatsapp:before {
   content: "\e90a";
-}
-.icon-woman-hair:before {
-  content: "\e90b";
 }
 .icon-youtube:before {
   content: "\e90c";
