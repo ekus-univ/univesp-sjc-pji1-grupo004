@@ -1,8 +1,9 @@
-
+{% load bootstrap %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
   {% load static %}
+  
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -162,90 +163,38 @@
 
           <div class="container">
             <h2 class="title">Deixe um depoimento sobre a Feira Santos Dumont</h2>
-
-
+          
+          
             <!-- caixa de depoimentos(com swiper) -->
             <div class="testimonials swiper-container">
               <div class="swiper-wrapper">
-
+              {% for contador in latest_post_list %}
                 <div class="card-testimonial swiper-slide">
                   <blockquote>
                     <p>
                     <span>&ldquo;</span>
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eos molestiae inventore quis, assumenda maiores et. Tenetur tempore doloribus adipisci quasi.
+                    {{ contador.text }}
                   </p>
                     <cite>
-                      Fulana de tal
+                      {{ contador.author }} em {{ contador.pub_date }}
 
                     </cite>
                   </blockquote> 
                 </div>   
+              {% endfor %}  
                 
-                <div class="card-testimonial swiper-slide">
-                  <blockquote>
-                    <p>
-                    <span>&ldquo;</span>
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eos molestiae inventore quis, assumenda maiores et. Tenetur tempore doloribus adipisci quasi.
-                  </p>
-                    <cite>
-                      Fulana de tal
-
-                    </cite>
-                  </blockquote> 
-                </div>
-
-                <div class="card-testimonial swiper-slide">
-                  <blockquote>
-                    <p>
-                    <span>&ldquo;</span>
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eos molestiae inventore quis, assumenda maiores et. Tenetur tempore doloribus adipisci quasi.
-                  </p>
-                    <cite>
-                      Fulana de tal
-
-                    </cite>
-                  </blockquote> 
-                </div>
-
-                <div class="card-testimonial swiper-slide">
-                  <blockquote>
-                    <p>
-                    <span>&ldquo;</span>
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eos molestiae inventore quis, assumenda maiores et. Tenetur tempore doloribus adipisci quasi.
-                  </p>
-                    <cite>
-                      Fulana de tal
-
-                    </cite>
-                  </blockquote> 
-                </div>
-
-                
-                
-                
-
-
-
               </div>
               <div class="swiper-pagination"></div>
             </div>
 
-
-
-
+            
             <!-- formulário de depoimentos -->
             <div>
-              <div>
-                <label for="exampleFormControlInput1" class="form-label"></label>
-                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder=" Ex.: Maria Souza">
-              </div>
-              <div class="mb-3">
-                <label for="exampleFormControlTextarea1" class="form-label"></label>
-                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Escreva seu depoimento"></textarea>
-              </div>
-              <div class="mb-3">
-                <button type="button" class="btn btn-secondary">Enviar</button>
-              </div>
+              <form action="" method="POST">
+                {% csrf_token %}
+                {{ form|bootstrap }}
+                <input type="submit" class="btn btn-secondary" value="Enviar">
+              </form>
             </div>
 
           </div>
